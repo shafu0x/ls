@@ -42,7 +42,7 @@ fn main() {
         println!(
             "{}{:<2} {:<6} {}",
             if is_dir { "d" } else { "-" },
-            parse_permissions(entry).unwrap_or(String::from("---------")),
+            parse_permissions(entry).unwrap_or(String::from("--")),
             get_file_size(entry).unwrap_or(0),
             entry.file_name().to_string_lossy().color(if is_dir {
                 Color::Blue
